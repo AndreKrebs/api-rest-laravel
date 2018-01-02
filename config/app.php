@@ -63,7 +63,7 @@ return [
     | ahead and set this to a sensible default for you out of the box.
     |
     */
-
+    // poderia ser America/Sao_Paulo mas preciso usar UTC
     'timezone' => 'UTC',
 
     /*
