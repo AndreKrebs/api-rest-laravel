@@ -16,4 +16,9 @@ class Company extends Model
     {
         return $this->hasMany('App\Job');
     }
+    
+    public function setPasswordAttribute($password)
+    {   
+        $this->attributes['password'] = bcrypt($password);
+    }
 }
