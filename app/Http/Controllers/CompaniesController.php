@@ -8,6 +8,11 @@ use App\Http\Controllers\Controller;
 
 class CompaniesController extends Controller
 {
+    
+    public function __construct() {
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
+    
     public function index()
     {
         $companies = Company::all();
