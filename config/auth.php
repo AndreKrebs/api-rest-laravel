@@ -65,15 +65,16 @@ return [
     */
 
     'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\User::class,
-        ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+//        'users' => [
+//            'driver' => 'eloquent',
+//            'model' => App\User::class,
+//        ],
+        // ajuste na configuração para validar autenticações com jwt pela table companies
+         'users' => [
+             'driver' => 'database',
+             'model' => App\User::class,
+             'table' => 'companies',
+         ],
     ],
 
     /*
